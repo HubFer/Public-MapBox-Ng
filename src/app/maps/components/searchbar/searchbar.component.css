@@ -1,0 +1,17 @@
+.search-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    margin: 20px auto;
+    background-color: white;
+}
+
+/* Style for the search input */
+.search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

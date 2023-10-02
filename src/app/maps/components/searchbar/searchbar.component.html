@@ -1,0 +1,9 @@
+<div class="search-container">
+    <input type="text" 
+    #searchInput
+    class="search-input" 
+    placeholder="Search..."
+    (keyup)="search(searchInput.value)">
+
+    <app-searchresults></app-searchresults>
+</div>

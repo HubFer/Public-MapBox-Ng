@@ -1,0 +1,21 @@
+<div class="alert alert-primary text-center"
+*ngIf="isLoadingPlaces; else resultTemplate">
+        <h6>Loading options...</h6>
+        <span>Please Wait</span>
+
+</div>
+
+<ng-template #resultTemplate>
+        <ul class="list-group" *ngIf="this.places.length>0">
+            <li class="list-group-item pointer" 
+                *ngFor="let item of places" 
+                [class.active] = "item.id===this.selectedId">
+
+                <h6>{{item.place_name}}</h6>
+                <br>
+                <h6>Value per day: {{item.price}} USD</h6>
+                <button class="btn btn-small"
+                    (click)="flyToPosition(item)"
+                    [ngClass]="item.id===this.selectedId ? 'btn-light' : 'btn-primary'">Fly there...</button>
+        </ul>
+</ng-template>

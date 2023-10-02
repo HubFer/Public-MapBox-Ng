@@ -1,0 +1,10 @@
+
+
+<app-loading *ngIf="!this.places.isLocationReady;else mapview"></app-loading>
+
+<ng-template #mapview>
+        <app-map-view></app-map-view>
+        <app-btn-mylocation></app-btn-mylocation>
+        <app-searchbar></app-searchbar>
+</ng-template>
+
